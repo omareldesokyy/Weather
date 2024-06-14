@@ -1,0 +1,186 @@
+:root{
+    --mainColor:#1e202b;
+    --secColor:#262936;
+    --textColor : #009ad8;
+}
+
+/*#region General */
+h3{
+    color: white;
+    font-size: 90px;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.mainbg-color{
+    background-color: var(--mainColor);
+}
+
+.secbg-color{
+    background-color: var(--secColor);
+}
+
+.text-muted-lg{
+    color: #bfc1c8;
+}
+
+.btn-babyblue{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--textColor);
+    --bs-btn-border-color: var(--textColor);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #4eb2da;
+    --bs-btn-hover-border-color: #4eb2da;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #4eb2da;
+    --bs-btn-active-border-color: #4eb2da;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--textColor);
+    --bs-btn-disabled-border-color: var(--textColor);
+}
+/*#endregion General */
+
+/*#region Navbar */
+.nav-link.active{
+    border:#009ad8 solid 2px;
+    border-radius: 50px;
+    padding: 0px 20px 0px 20px !important;
+    color: var(--textColor) !important;
+}
+
+.nav-link{
+    padding: 0px 20px 0px 20px !important;
+    transition: all .3s;
+    border: #009bd800 solid 2px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+.nav-link:hover{
+    border: #009ad8 solid 2px;
+    border-radius: 50px;
+    color: var(--textColor) !important;
+}
+.slogan{
+    font-size: 10px;
+}
+/*#endregion Navbar */
+
+/*#region Main */
+.main{
+    background-image: url(../imgs/banner.png);
+    background-repeat: no-repeat;
+}
+input[placeholder = 'Find your location']{
+    outline: none;
+    color: white;
+}
+.main-data{
+    margin-bottom:30px;
+}
+
+.temp{
+    color: white;
+    background-color: #323544;
+    height: 100%;
+}
+
+.temp.mid{
+    background-color: #262936;
+}
+
+.temp-header{
+    background-color: #2d2f3d !important;
+}
+
+.temp-header.mid{
+    background-color: #20222c !important;
+}
+
+.body.remaining{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 440px;
+    gap: 15px;
+}
+.mode{
+    color: #009ad8;
+}
+h4{
+    font-size: 17px;
+}
+/*#endregion Main */
+
+/*#region Footer */
+.socials i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+
+    color: #009ad8;
+
+    background-color: var(--mainColor);
+
+    cursor: pointer;
+
+    transition: all .5s;
+}
+
+.socials i:hover{
+    background-color: var(--textColor);
+    color: #fff;
+
+}
+input[placeholder = 'Enter your email to subscribe']{
+    outline: none;
+    color: white;
+}
+/*#endregion Footer */
+
+/*#region Loading Screen */
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid var(--secColor);
+    animation: prixClipFix 2s linear infinite ;
+  }
+  .loader::after{
+    transform: rotate3d(90, 90, 0, 180deg );
+    border-color: var(--textColor);
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+  }
+  /*#endregion Loading Screen */

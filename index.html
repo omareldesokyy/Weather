@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- #region CSS Links -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- #endregion CSS Links -->
+
+    <!-- #region Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- #endregion Font Links -->
+
+    <!-- #region Proj. Info. -->
+    <link rel="icon" href="imgs/favicon.png">
+    <title>Weather</title>
+    <!-- #endregion Proj. Info. -->
+</head>
+
+<body class="secbg-color">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg mainbg-color text-white py-4">
+        <div class="container">
+            <a class="text-white navbar-brand d-flex justify-content-center align-items-center gap-3" href="#">
+                <img src="imgs/logo.png" alt="" width="40" height="24" class="d-inline-block align-text-top">
+                <div class="lh-sm">
+                    <h6 class="m-0">Weather</h6>
+                    <small class="slogan text-muted-lg">tagline goes here</small>
+                </div>
+            </a>
+            <div class=" collapse navbar-collapse " id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto gap-5">
+                    <li class="nav-item">
+                        <a class="text-white nav-link active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-white nav-link">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-white nav-link">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-white nav-link">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-white nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Main -->
+    <main class="mainbg-color w-100 main">
+        <div class="container d-flex flex-column">
+            <div class="searchbar my-5 px-1 py-1 d-flex justify-content-between rounded-pill mainbg-color">
+                <input placeholder="Find your location" class="bg-transparent ms-3 w-100 border-0" type="text">
+                <button class="btn btn-babyblue rounded-pill px-4">Search</button>
+            </div>
+
+            <div class="main-data row rounded-2 overflow-hidden row-gap-5">
+                <div class="d-flex flex-column justify-content-center align-items-center w-100">
+                    <span class="loader"></span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main -->
+
+    <!-- Footer -->
+    <footer class="secbg-color">
+
+        <div class="container lh-sm">
+
+            <div class="row">
+
+                <div class="col-md-8">
+                    <form>
+                        <div
+                            class="email-bar my-5 px-1 py-1 d-flex justify-content-between w-100 rounded-pill mainbg-color">
+                            <input placeholder="Enter your email to subscribe"
+                                class="bg-transparent ms-3  w-100 border-0" type="email">
+                            <button class="btn btn-babyblue rounded-pill px-4">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="socials my-5 px-1 py-1 d-flex w-100 justify-content-center gap-3 rounded-pill">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-google-plus-g"></i>
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </div>
+                </div>
+
+            </div>
+            <p class="text-muted-lg m-0 pb-3">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+
+        </div>
+
+    </footer>
+    <!-- Footer -->
+
+
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
