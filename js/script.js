@@ -2,9 +2,8 @@ const mainData = document.querySelector('.main-data');
 
 const searchBar = document.querySelector(`input[placeholder = 'Find your location']`)
 
-//onloading by default **Cairo
-// window.addEventListener('load', displayWeather);
 
+//onloading Ask for location
 let geolocat  = '';
 
 navigator.geolocation.getCurrentPosition(
