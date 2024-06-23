@@ -3,8 +3,23 @@ const mainData = document.querySelector('.main-data');
 const searchBar = document.querySelector(`input[placeholder = 'Find your location']`)
 
 //onloading by default **Cairo
-window.addEventListener('load', displayWeather)
+// window.addEventListener('load', displayWeather);
 
+let geolocat  = '';
+
+navigator.geolocation.getCurrentPosition(
+    (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        geolocat = `${latitude},${longitude}`;
+
+        displayWeather();
+    },
+    (error) => {
+        console.error(`Error retrieving location: ${error.message}`);
+    }
+);
 //oninput data in search 
 searchBar.addEventListener('input', displayWeather)
 
@@ -19,20 +34,20 @@ async function getWeather(searchKey) {
         }
     }
     catch (error) {
-       mainData.querySelectorAll('div')[0].innerHTML += `<h1 class='text-muted-lg'>Fail to obtain data, Please use established connection</h1>` 
+        mainData.querySelectorAll('div')[0].innerHTML += `<h1 class='text-muted-lg'>Fail to obtain data, Please use established connection</h1>`
     }
 }
 
 //Display data on screen
-async function displayWeather(){
-    
+async function displayWeather() {
+
     let searchItem = '';
 
-    if(searchBar.value != ''){
+    if (searchBar.value != '') {
         searchItem = searchBar.value
     }
-    else{
-        searchItem = 'Cairo'
+    else {
+        searchItem = geolocat;
     }
 
     const weatherData = await getWeather(searchItem);
@@ -114,6 +129,8 @@ function getStringDate(year, month, day) {
     const weekday = date.toLocaleString('default', { weekday: 'long' });
     return [monthname, weekday];
 }
+
+
 
 
 
